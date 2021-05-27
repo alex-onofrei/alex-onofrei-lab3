@@ -1,0 +1,67 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: white; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.sidenav button {
+  background-color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+
+/* Change background color of buttons on hover */
+.sidenav button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.sidenav button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.component{
+    margin: 4px;
+}
+
+#Menu{
+  align-content: center;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+#information_welcome{
+  align-content: center;
+}
+
+#logo{
+  width: 300px;
+  height: 200px;
+}
+
+#addCart{
+  margin: 6px;
+}

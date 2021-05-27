@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="sidenav">
+  <button class="tablinks" onclick="openInfo(event, 'Menu')">Store Information</button>
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client Information</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Available Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Your Cart</button>
+</div>
+
+<!-- MAIN Page-->
+<div align=center id="Menu" class="tabcontent">
+	<h1>Welcome to our Online Shopping Website</h1>
+	<a>
+		<img id="logo" src="images/store.jpg" alt="website">
+	</a>
+	<br>
+	<br>
+	<h3>Store Hours:</h3>
+	Monday to Friday: 7am to 7pm
+	<br>
+	Saturday and Sunday: 10am to 5pm
+	<br>
+	<br>
+	<br>
+	<h3>Location</h3>
+	Gatineau: 332323 Aylmer Road, J8J 3D5
+	<br>
+	Ottawa: 122 Spark Street, J4T 3E1
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+<!-- Tab content -->
+<div align=center id="Client" class="tabcontent">
+  <div align=center id="information_welcome">
+  	<h1>Client Information</h1>
+  	<a>
+		<img id="logo" src="images/logo.jpg" alt="website">
+	</a>
+  </div>
+  <h2>Please provide your information</h2>
+
+  <div id="personal_information">
+	<div class="component">
+		First name: <input type="text" name="firstname"><br>
+	</div>
+	<div>
+		 Last name: <input type="text" name="lastname"><br>
+	</div>
+
+	<div class="component">
+		Delivery Address:   
+		<input>
+	</div>
+  </div>
+  <h4>What are your preferences?</h4>
+	Food Preference:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+  <option value="GlutenFree">Gluten Free</option>
+  <option value="DairyFree">Dairy Free</option>
+  <option value="NutFree">Nut Free</option>
+  <option value="Organic">Organic</option>
+  <option value="None">None</option>
+	</select>
+  <div>
+  	<br>
+  	<button onclick="openInfo(event, 'Products')">Go to Available Products</button>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  	<br>
+  If a preference is missing, let us know here!
+  	<br>
+    <textarea rows="5" cols="30"></textarea><br>
+  </div>
+</div>
+
+<div align=center id="Products" class="tabcontent">
+  <div align=center id="information_welcome">
+  	<h1>Your Targeted Products</h1>
+  	<a>
+		<img id="logo" src="images/food.JPG" alt="website">
+	</a>
+  </div>
+  <h3>These products are selected based on your restrictions</h3>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <div>
+		<button id="addCart" type="button" class="block" onclick="selectedItems()">
+			Add selected items to cart.
+		</button>
+		<br>
+		<button onclick="openInfo(event, 'Client')">Go to previous page</button>
+	</div>
+</div>
+
+<div align=center id="Cart" class="tabcontent">
+  <h1>Your Cart</h1>
+  <a>
+		<img id="logo" src="images/cart.JPG" alt="website">
+</a>
+  <h3>Cart information</h3>
+  <div id="displayCart"></div>
+  <div>
+  	<br>
+  	<br>
+  	<h4>Thank you for shopping with us</h4>
+
+  </div>
+</div>
+
+<footer align="end">
+	Site created by: Alex
+</footer>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+
+</html>
